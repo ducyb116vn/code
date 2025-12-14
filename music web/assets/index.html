@@ -12,7 +12,7 @@
 <body>
     <div class="main w-screen h-screen bg-black mx-auto flex">
 
-        <div class="left w-1/5 h-full bg-[#0d0d0d] mr-3 px-[26px] py-[28px] flex flex-col">
+        <div class="left w-1/5 h-full bg-[#0d0d0d] mr-3 px-[26px] py-[28px] flex flex-col max-lg:hidden">
             <div class="header flex justify-between items-center">
                 <div class="eclipse flex gap-[18px]">
                     <i class="fa-solid fa-circle" style="color: #da170b;"></i>
@@ -113,7 +113,7 @@
             </div>
         </div>
 
-        <div class="center w-3/5 bg-[#0d0d0d] mr-8 flex flex-col relative overflow-hidden">
+        <div class="center w-3/5 bg-[#0d0d0d] mr-8 flex flex-col relative overflow-hidden max-lg:w-full max-lg:mx-auto">
             <div class="absolute left-[600px] opacity-80 pointer-events-none z-0">
                 <svg width="1102" height="811" viewBox="0 0 1102 811" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g opacity="0.8">
@@ -210,10 +210,21 @@
                 </svg>
 
             </div>
-            <div class="header flex items-center px-[26px] py-[28px]">
-                <div class="angle flex gap-5 ">
+            <div class="header flex items-center px-[26px] py-[28px] ">
+                <div class="angle flex gap-5 max-lg:hidden">
                     <i class="fa-solid fa-chevron-left bg-[#202020] rounded-3xl px-3 py-2 text-white"></i>
                     <i class="fa-solid fa-chevron-right bg-[#202020] rounded-3xl px-3 py-2 text-white"></i>
+                </div>
+                <div class="header-max-lg opacity-0 max-lg:opacity-100 flex max-lg:w-full max-lg:justify-between">
+                    <div class="items flex text-white gap-[18px] items-center text-[18px] font-semibold">
+                        <p>Home</p>
+                        <p>Favorites</p>
+                        <p>Artists</p>
+                        <p>Podcast</p>
+                    </div>
+                    <div class="search-button text-white">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
                 </div>
             </div>
 
@@ -221,26 +232,27 @@
                 <i class="fa-solid fa-circle-check" style="color: #00b511;"></i>
                 <p class="text-[#575656] text-[16px]">Verified Artists</p>
             </div>
-            <div class="name-play flex justify-between items-center mx-5">
+            <div class="name-play flex justify-between items-center mx-5 gap-[8px]">
                 <div class="name">
-                    <p class="text-white font-medium text-[48px]">Maharani</p>
+                    <p class="text-white font-medium text-[48px] max-lg:text-[24px]">Maharani</p>
                     <div class="listeners flex gap-[7px]">
-                        <p class="text-white font-medium text-[18px]">999,999</p>
-                        <p class="text-[#838383] font-normal text-[18px]">Monthly listeners</p>
+                        <p class="text-white font-medium text-[18px] max-lg:hidden">999,999</p>
+                        <p class="text-white font-medium text-[18px] max-lg:text-[12px]">99k</p>
+                        <p class="text-[#838383] font-normal text-[18px] max-lg:text-[12px]">Monthly listeners</p>
                     </div>
                 </div>
-                <div class="play flex text-white gap-[22px]">
+                <div class="play flex text-white gap-[12px] max-lg:flex-col">
                     <p
-                        class="w-[150px] py-3 rounded-3xl bg-[#00BD12] flex items-center justify-center font-medium text-[22px]">
+                        class="w-[150px] py-3 rounded-3xl bg-[#00BD12] flex items-center justify-center font-medium text-[22px] max-lg:text-[12px] max-lg:w-[120px]">
                         Play</p>
                     <p
-                        class="w-[150px] py-3 rounded-3xl bg-[#393939] flex items-center justify-center font-medium text-[22px]">
+                        class="w-[150px] py-3 rounded-3xl bg-[#393939] flex items-center justify-center font-medium text-[22px] max-lg:text-[12px] max-lg:w-[120px]">
                         Unfollow</p>
                 </div>
             </div>
 
             <div
-                class="menu-list mt-5 bg-[#121212] flex items-center gap-10 text-[#7a7a7a] px-5 py-5 z-10 relative">
+                class="menu-list mt-5 bg-[#121212] flex items-center gap-10 text-[#7a7a7a] px-5 py-5 z-10 relative max-lg:text-[12px]">
                 <p>All Songs</p>
                 <div class="abcyx relative">
                     <p class="text-white">Popular</p>
@@ -253,54 +265,54 @@
                 <p>Artist Radio</p>
             </div>
 
-            <div class="rectangle-14 bg-[#0A0A0A]  px-5 z-10 relative">
+            <div class="rectangle-14 bg-[#0A0A0A]  px-5 z-10 relative max-lg:text-[12px]">
 
                 <div
-                    class="savior flex mt-[34px] flex gap-10 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680]">
-                    <p class="text-[#575656] font-normal text-[18px] w-1/12">#1</p>
-                    <img class="w-[50px] h-[50px] rounded-xl mr-5"
+                    class="savior flex mt-[34px] flex gap-10 max-lg:gap-5 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680] max-lg:mt-[8px]">
+                    <p class="text-[#575656] font-normal text-[18px] ">#1</p>
+                    <img class="w-[50px] h-[50px] max-lg:w-[25px] max-lg:h-[25px] rounded-xl mr-5"
                         src="/music web/assets/img/5c92b6765457d88b7bfdd43c5b6428bf15663e88.jpg" alt="">
-                    <p class="text-white font-medium text-[20px] w-2/5">Savior</p>
-                    <p class="text-[#838383] font-normal w-1/5">999,999</p>
-                    <p class="text-[#838383] font-normal w-1/12">1:50</p>
-                    <i class="fa-solid fa-heart text-[red] w-1/12"></i>
-                    <i class="fa-solid fa-ellipsis text-[#575656] w-1/12"></i>
+                    <p class="text-white font-medium text-[20px]">Savior</p>
+                    <p class="text-[#838383] font-normal ">999,999</p>
+                    <p class="text-[#838383] font-normal ">1:50</p>
+                    <i class="fa-solid fa-heart text-[red]"></i>
+                    <i class="fa-solid fa-ellipsis text-[#575656] "></i>
                 </div>
                 <div
-                    class="savior flex mt-[29px] flex gap-10 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680]">
-                    <p class="text-[#575656] font-normal text-[18px] w-1/12">#2</p>
-                    <img class="w-[50px] h-[50px] rounded-xl mr-5"
+                    class="savior flex mt-[29px] flex gap-10 max-lg:gap-5 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680] max-lg:mt-[8px]">
+                    <p class="text-[#575656] font-normal text-[18px]">#2</p>
+                    <img class="w-[50px] h-[50px] max-lg:w-[25px] max-lg:h-[25px] rounded-xl mr-5"
                         src="/music web/assets/img/5c92b6765457d88b7bfdd43c5b6428bf15663e88.jpg" alt="">
-                    <p class="text-white font-medium text-[20px] w-2/5">Savior</p>
-                    <p class="text-[#838383] font-normal w-1/5">999,999</p>
-                    <p class="text-[#838383] font-normal w-1/12">1:50</p>
-                    <i class="fa-solid fa-heart text-[red] w-1/12"></i>
-                    <i class="fa-solid fa-ellipsis text-[#575656] w-1/12"></i>
+                    <p class="text-white font-medium text-[20px]">Savior</p>
+                    <p class="text-[#838383] font-normal">999,999</p>
+                    <p class="text-[#838383] font-normal">1:50</p>
+                    <i class="fa-solid fa-heart text-[red] "></i>
+                    <i class="fa-solid fa-ellipsis text-[#575656]"></i>
                 </div>
                 <div
-                    class="savior flex mt-[29px] flex gap-10 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680]">
-                    <p class="text-[#575656] font-normal text-[18px] w-1/12">#3</p>
-                    <img class="w-[50px] h-[50px] rounded-xl mr-5"
+                    class="savior flex mt-[29px] flex gap-10 max-lg:gap-5 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680] max-lg:mt-[8px]">
+                    <p class="text-[#575656] font-normal text-[18px]">#3</p>
+                    <img class="w-[50px] h-[50px] max-lg:w-[25px] max-lg:h-[25px] rounded-xl mr-5"
                         src="/music web/assets/img/5c92b6765457d88b7bfdd43c5b6428bf15663e88.jpg" alt="">
-                    <p class="text-white font-medium text-[20px] w-2/5">Savior</p>
-                    <p class="text-[#838383] font-normal w-1/5">999,999</p>
-                    <p class="text-[#838383] font-normal w-1/12">1:50</p>
-                    <i class="fa-solid fa-heart text-[red] w-1/12"></i>
-                    <i class="fa-solid fa-ellipsis text-[#575656] w-1/12"></i>
+                    <p class="text-white font-medium text-[20px]">Savior</p>
+                    <p class="text-[#838383] font-normal">999,999</p>
+                    <p class="text-[#838383] font-normal">1:50</p>
+                    <i class="fa-solid fa-heart text-[red]"></i>
+                    <i class="fa-solid fa-ellipsis text-[#575656]"></i>
                 </div>
                 <div
-                    class="savior flex mt-[29px] flex gap-10 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680]">
-                    <i class="fa-brands fa-soundcloud text-[#00BD12] font-normal text-[18px] w-1/12"></i>
-                    <img class="w-[50px] h-[50px] rounded-xl mr-5"
+                    class="savior flex mt-[29px] flex gap-10 max-lg:gap-5 p-4 justify-between items-center border-b-[0.8px] border-b-[#57565680] max-lg:mt-[8px]">
+                    <i class="fa-brands fa-soundcloud text-[#00BD12] font-normal text-[18px]"></i>
+                    <img class="w-[50px] h-[50px] max-lg:w-[25px] max-lg:h-[25px] rounded-xl mr-5"
                         src="/music web/assets/img/5c92b6765457d88b7bfdd43c5b6428bf15663e88.jpg" alt="">
-                    <p class="text-[#00BD12] font-medium text-[20px] w-2/5">Savior</p>
-                    <p class="text-[#838383] font-normal w-1/5">999,999</p>
-                    <p class="text-[#838383] font-normal w-1/12">1:50</p>
-                    <i class="fa-solid fa-heart text-[red] w-1/12"></i>
-                    <i class="fa-solid fa-ellipsis text-[#575656] w-1/12"></i>
+                    <p class="text-[#00BD12] font-medium text-[20px]">Savior</p>
+                    <p class="text-[#838383] font-normal">999,999</p>
+                    <p class="text-[#838383] font-normal">1:50</p>
+                    <i class="fa-solid fa-heart text-[red]"></i>
+                    <i class="fa-solid fa-ellipsis text-[#575656]"></i>
                 </div>
-                <div class="play-btn flex flex-col items-center mt-8 -ml-[28px] gap-[21px] ">
-                    <div class="btn-list flex items-center gap-[38px]">
+                <div class="play-btn flex flex-col items-center mt-8  gap-[21px] max-lg:mt-10 ">
+                    <div class="btn-list flex items-center gap-[38px] max-lg:gap-[28px]">
                         <i class="fa-regular fa-heart text-[#838383] fa-xl"></i>
                         <i class="fa-solid fa-volume-high text-[#838383] fa-xl"></i>
                         <i class="fa-regular fa-circle-left text-white fa-xl"></i>
@@ -309,10 +321,10 @@
                         <i class="fa-solid fa-arrow-rotate-left text-[#838383] fa-xl "></i>
                         <i class="fa-solid fa-shuffle text-[#838383] fa-xl"></i>
                     </div>
-                    <div class="time flex items-center gap-[26px]">
+                    <div class="time flex items-center gap-[26px] max-lg:gap-[20px]">
                         <p class="text-white">0:51</p>
-                        <div class="bar flex items-center relative">
-                            <div class="h-[7px] bg-[#575656] rounded-[10px] w-[550px] relative">
+                        <div class="bar flex items-center relative ">
+                            <div class="h-[7px] bg-[#575656] rounded-[10px] w-[550px] max-lg:w-[280px] relative">
                                 <div class="h-full bg-[#D9D9D9] rounded-[10px] w-2/3"></div>
                                 <div
                                     class="absolute top-1/2 transform -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg -right-2">
@@ -322,13 +334,21 @@
                         <p class="text-[#838383]">1:41</p>
                     </div>
                 </div>
+                <div class="settings text-[#9C9C9C] flex gap-[17.5px] items-center hidden max-lg:block  max-lg:flex max-lg:mt-[100px]">
+                    <i class="fa-solid fa-gear"></i>
+                    <p class="font-normal text-[16px]">Settings</p>
+                </div>
+                <div class="settings text-[#9C9C9C] flex gap-[17.5px] items-center hidden max-lg:block max-lg:flex max-lg:mt-[10px]">
+                    <i class="fa-solid fa-crown text-[#fdab02]"></i>
+                    <p class="font-normal text-[16px] text-[#fdab02]">Go premium</p>
+                </div>
 
             </div>
 
 
         </div>
 
-        <div class="right w-1/5 bg-[#0d0d0d] flex gap-[12px] flex-col">
+        <div class="right w-1/5 bg-[#0d0d0d] flex gap-[12px] flex-col max-lg:hidden">
             <div class="top h-2/5 flex justify-center bg-black relative overflow-hidden">
                 <div class="absolute right-0 opacity-80 pointer-events-none z-0">
                     <svg width="241" height="426" viewBox="0 0 241 426" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,9 +464,9 @@
                     </div>
                 </div>
             </div>
-            <div
-                class="bottom bg-black/70 h-3/5">
-                <img class="h-full w-full" src="/music web/assets/img/5c92b6765457d88b7bfdd43c5b6428bf15663e88.jpg" alt="">
+            <div class="bottom bg-black/70 h-3/5">
+                <img class="h-full w-full" src="/music web/assets/img/5c92b6765457d88b7bfdd43c5b6428bf15663e88.jpg"
+                    alt="">
             </div>
         </div>
     </div>
