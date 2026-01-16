@@ -8,85 +8,140 @@
   <!-- <link rel="stylesheet" href="./assets/css/auth.css"> -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @keyframes faded {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .faded {
+      animation: faded 1s ease-out forwards;
+    }
+
+
+    @keyframes rainbow {
+      0% {
+        color: red;
+      }
+
+      14% {
+        color: orange;
+      }
+
+      28% {
+        color: yellow;
+      }
+
+      42% {
+        color: green;
+      }
+
+      57% {
+        color: blue;
+      }
+
+      71% {
+        color: indigo;
+      }
+
+      85% {
+        color: violet;
+      }
+
+      100% {
+        color: red;
+      }
+    }
+
+    .blink {
+      animation: rainbow 2s linear infinite;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-left {
+      animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .animate-slide-right {
+      animation: slideInRight 0.8s ease-out forwards;
+    }
+
+    @media (max-width: 1023px) {
+
+      .animate-slide-left,
+      .animate-slide-right {
+        animation: none !important;
+      }
+    }
+  </style>
 </head>
-
-<style>
-  @keyframes rainbow {
-    0% {
-      color: red;
-    }
-
-    14% {
-      color: orange;
-    }
-
-    28% {
-      color: yellow;
-    }
-
-    42% {
-      color: green;
-    }
-
-    57% {
-      color: blue;
-    }
-
-    71% {
-      color: indigo;
-    }
-
-    85% {
-      color: violet;
-    }
-
-    100% {
-      color: red;
-    }
-  }
-
-  .blink {
-    animation: rainbow 2s linear infinite;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
 
 <body>
   <div
     class="w-full min-h-screen bg-[url('https://i.redd.it/i-drew-myself-a-4k-wallpaper-inspired-by-epic-scenery-from-v0-m1l0w82t84i81.jpg?width=3246&format=pjpg&auto=webp&s=b9c42f0ee763985d8601647278ba630495ee55c4')] bg-cover bg-bottom ">
 
     <header
-      class="header w-full flex justify-between bg-black/70 px-10 flex-wrap max-md:flex-col max-md:items-center max-md:justify-center max-lg:flex-col max-lg:items-center max-lg:justify-center">
+      class="header w-full  flex justify-between bg-black/70 px-10 flex-wrap max-md:flex-col max-md:items-center max-md:justify-center max-lg:flex-col max-lg:items-center max-lg:justify-center">
       <a href="index.html" rel="noopener">
-        <img class="w-40 h-40 max-md:w-30 max-md:h-30"
+        <img class="w-40 h-40 max-md:w-30 max-md:h-30 animate-slide-left"
           src="https://www.pngplay.com/wp-content/uploads/11/Minecraft-Logo-Transparent-PNG.png" alt="Logo" />
       </a>
       <input id="menu-toggle" type="checkbox" class="hidden peer" />
       <label for="menu-toggle"
         class="fa-solid fa-angle-down text-white text-3xl opacity-0 max-lg:block max-lg:opacity-100"></label>
       <div
-        class="menu transition-all duration-300 max-lg:max-h-0 max-lg:opacity-0 peer-checked:max-lg:max-h-60 peer-checked:max-lg:opacity-100 flex gap-10 text-white font-semibold text-lg items-center max-lg:flex-col max-lg:mt-4">
-        <p class="cursor-pointer hover:opacity-50 duration-150 "><a href="#CSKH">About</a></p>
-        <p class="cursor-pointer hover:opacity-50 duration-150"><a href="#service">Service</a></p>
-        <p class="cursor-pointer hover:opacity-50 duration-150"><a href="#CSKH">Contact</a></p>
+        class="menu animate-slide-right duration-300 max-lg:max-h-0 max-lg:opacity-0 peer-checked:max-lg:max-h-60 peer-checked:max-lg:opacity-100 flex gap-10 text-white font-semibold text-lg items-center max-lg:flex-col max-lg:mt-4">
+        <p class="cursor-pointer hover:opacity-50 duration-150 text-2xl max-lg:text-xl"><a href="#CSKH">About</a></p>
+        <p class="cursor-pointer hover:opacity-50 duration-150 text-2xl max-lg:text-xl"><a href="#service">Service</a>
+        </p>
+        <p class="cursor-pointer hover:opacity-50 duration-150 text-2xl max-lg:text-xl"><a href="#CSKH">Contact</a></p>
         <div class="relative group">
-          <p class="cursor-pointer hover:opacity-50 duration-150 max-lg:hidden">Account</p>
+          <p class="cursor-pointer hover:opacity-50 duration-150 max-lg:hidden text-2xl">Account</p>
           <ul class="hidden absolute right-0 text-white group-hover:block ">
-            <li class="text-right text-sm hover:opacity-50 duration-150 max-lg:hidden"><a href="login.html">Login</a>
+            <li class="text-right text-2xl hover:opacity-50 duration-150 max-lg:hidden"><a href="login.html">Login</a>
             </li>
-            <li class="text-right text-sm hover:opacity-50 duration-150 max-lg:hidden"><a
+            <li class="text-right text-2xl hover:opacity-50 duration-150 max-lg:hidden"><a
                 href="register.html">Register</a></li>
           </ul>
-          <p class="cursor-pointer hover:opacity-50 duration-150 lg:hidden">
+          <p class="cursor-pointer hover:opacity-50 duration-150 lg:hidden text-xl">
             <a href="login.html">Account</a>
           </p>
         </div>
       </div>
     </header>
-    <div class="Introduction flex flex-col items-center py-8 gap-10 text-center">
+    <div class="Introduction faded [animation-delay:200ms] flex flex-col items-center py-8 gap-10 text-center">
       <p class="text-white text-5xl font-semibold drop-shadow-[0_4px_6px_rgba(0,0,0,0.5)]">Welcome To AccMinecraft</p>
       <p class="blink text-xl ">Where Has A Lot of Reasonable Premium Minecraft Accounts</p>
       <button class=" bg-blue-300/80 p-3 rounded-lg duration-150"><a
@@ -95,10 +150,10 @@
           target="_blank" rel="noopener">What is Premium Minecraft Account?</a></button>
       <input class="rounded-lg min-w-[360px] xl:w-200 bg-white/80 p-3" type="text" placeholder="Tìm kiếm ở đây...">
     </div>
-    <div class="ITEMS w-full mt-10 flex justify-around flex-wrap gap-x-6 gap-y-10 max-lg:p-3">
-      <div class="NFA w-60 cursor-pointer hover:scale-105 duration-150">
+    <div class="ITEMS w-full faded mt-10 flex justify-around flex-wrap gap-x-6 gap-y-10 max-lg:p-3">
+      <div class="NFA w-70 cursor-pointer hover:scale-105 duration-150">
         <div
-          class="h-50 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
+          class="h-60 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
         </div>
         <div class="h-35 bg-white/80 flex flex-col items-center p-1 rounded-b-lg text-center">
           <p>Non-Full Access Accounts</p>
@@ -106,9 +161,9 @@
           <p>NFA means you do not have any access to your account.(Email, Password, Skin,...)</p>
         </div>
       </div>
-      <div class="SFA w-60 cursor-pointer hover:scale-105 duration-150">
+      <div class="SFA w-70 cursor-pointer hover:scale-105 duration-150">
         <div
-          class="h-50 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
+          class="h-60 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
         </div>
         <div class="h-35 bg-white/80 flex flex-col items-center p-1 rounded-b-lg text-center">
           <p>Semi-Full Access Accounts</p>
@@ -116,9 +171,9 @@
           <p>SFA means you have limited access to your account.(Email or Password or Skin or,...)</p>
         </div>
       </div>
-      <div class="MFA w-60 cursor-pointer hover:scale-105 duration-150">
+      <div class="MFA w-70 cursor-pointer hover:scale-105 duration-150">
         <div
-          class="h-50 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
+          class="h-60 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
         </div>
         <div class="h-35 bg-white/80 flex flex-col items-center p-1 rounded-b-lg text-center">
           <p>Mail-Full Access Accounts</p>
@@ -126,9 +181,9 @@
           <p>MFA means you have full access to your account's email</p>
         </div>
       </div>
-      <div class="Cape w-60 cursor-pointer hover:scale-105 duration-150">
+      <div class="Cape w-70 cursor-pointer hover:scale-105 duration-150">
         <div
-          class="h-50 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
+          class="h-60 bg-[url(https://accminecraft.net/image/product/ae74e64e015aa2f60cbf49a2505136724WyOd)] bg-cover bg-bottom rounded-t-lg">
         </div>
         <div class="h-35 bg-white/80 flex flex-col items-center p-1 rounded-b-lg text-center">
           <p>Cape OF</p>
